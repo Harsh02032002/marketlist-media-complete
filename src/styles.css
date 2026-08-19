@@ -4,6 +4,141 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* ---------------------------------------------------------------
+ * MARKETLIST MEDIA — galaxy dark design system
+ * Neon blue / purple / pink on a deep space background.
+ * --------------------------------------------------------------- */
+
+@theme {
+  --font-display: "Orbitron", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-neon-blue: oklch(0.78 0.15 220);
+  --color-neon-purple: oklch(0.62 0.24 296);
+  --color-neon-pink: oklch(0.68 0.26 342);
+
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-glow-pulse: glow-pulse 3.2s ease-in-out infinite;
+  --animate-twinkle: twinkle 4s ease-in-out infinite;
+  --animate-gradient-x: gradient-x 6s ease infinite;
+  --animate-orbit: orbit 18s linear infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.06);
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes gradient-x {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@utility glass {
+  background-color: color-mix(in oklab, var(--card) 72%, transparent);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(14px);
+}
+
+@utility glass-strong {
+  background-color: color-mix(in oklab, var(--card) 92%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-neon-blue) 18%, transparent);
+  backdrop-filter: blur(20px);
+}
+
+@utility text-gradient {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-neon-blue),
+    var(--color-neon-purple),
+    var(--color-neon-pink)
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+@utility bg-gradient-neon {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-neon-blue),
+    var(--color-neon-purple),
+    var(--color-neon-pink)
+  );
+}
+
+@utility glow-blue {
+  box-shadow: 0 0 24px -6px color-mix(in oklab, var(--color-neon-blue) 70%, transparent);
+}
+
+@utility glow-purple {
+  box-shadow: 0 0 28px -6px color-mix(in oklab, var(--color-neon-purple) 70%, transparent);
+}
+
+@utility glow-pink {
+  box-shadow: 0 0 28px -6px color-mix(in oklab, var(--color-neon-pink) 70%, transparent);
+}
+
+@utility section-y {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  @media (width >= 768px) {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
+
+@utility eyebrow {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
 /*
  * Design system definition.
  *
