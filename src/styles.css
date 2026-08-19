@@ -154,7 +154,6 @@
  */
 
 @theme inline {
-  --color-neon-cyan: var(--neon-cyan);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
