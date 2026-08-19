@@ -44,16 +44,16 @@ function StatCard({
   const Icon = statIcons[stat.icon]!;
 
   return (
-    <div className={`glass flex flex-col items-center rounded-3xl border border-border p-8 transition-all duration-300 hover:-translate-y-1 ${accent.glow}`}>
-      <div className={`mb-4 rounded-2xl p-4 ${accent.bg}`}>
-        <Icon className={`h-8 w-8 ${accent.text}`} />
+    <div className={`glass flex flex-col items-center rounded-2xl border border-border p-4 sm:p-8 transition-all duration-300 hover:-translate-y-1 ${accent.glow}`}>
+      <div className={`mb-2 sm:mb-4 rounded-xl p-2.5 sm:p-4 ${accent.bg}`}>
+        <Icon className={`h-5 w-5 sm:h-8 sm:w-8 ${accent.text}`} />
       </div>
-      <p className={`font-display text-5xl font-black ${accent.text}`}>
+      <p className={`font-display text-2xl sm:text-5xl font-black ${accent.text}`}>
         {stat.prefix ?? ""}
         {count}
         {stat.suffix ?? ""}
       </p>
-      <p className="mt-2 text-center font-heading text-sm font-medium text-muted-foreground">
+      <p className="mt-1 sm:mt-2 text-center font-heading text-xs sm:text-sm font-medium text-muted-foreground">
         {stat.label}
       </p>
     </div>

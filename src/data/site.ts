@@ -238,105 +238,120 @@ export const portfolio: {
     url: "https://alexieclothing.base44.app",
     description:
       "Premium fashion e-commerce platform with elegant product showcases and seamless shopping...",
-    image: alexie.url,
+    image:
+      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800&auto=format&fit=crop",
   },
   {
     title: "Pavillion Park Chintamani",
     url: "https://pavillion-park-chintamani.base44.app",
     description:
       "Luxury residential community website featuring immersive property tours and modern amenity...",
-    image: pavillion.url,
+    image:
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=800&auto=format&fit=crop",
   },
   {
     title: "Prudhvi Project",
     url: "https://prudhvi-project.base44.app",
     description:
       "Professional portfolio showcasing creative digital projects with a clean, modern interface.",
-    image: prudhvi.url,
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
   },
   {
     title: "Gowda Real Estates",
     url: "https://gowda-real-estates.base44.app",
     description:
       "Premium real estate platform with advanced property listings and virtual tour capabilities.",
-    image: gowda.url,
+    image:
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",
   },
   {
     title: "Mili Resorts",
     url: "https://miliresorts.base44.app",
     description:
       "Tropical resort website with stunning visuals, booking integration, and immersive destination experiences.",
-    image: mili.url,
+    image:
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop",
   },
   {
     title: "Victoria Club Hotel",
     url: "https://victoria-club-hotel.base44.app",
     description:
       "Elegant 5-star hotel website featuring luxury amenities, room showcases, and online reservations.",
-    image: victoria.url,
+    image:
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=800&auto=format&fit=crop",
   },
   {
     title: "Natures Resorts",
     url: "https://naturesresorts.base44.app",
     description:
       "Eco-friendly nature resort platform highlighting sustainable tourism and serene getaway experiences.",
-    image: natures.url,
+    image:
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=800&auto=format&fit=crop",
   },
   {
     title: "Vale Forever",
     url: "https://valeforever.base44.app",
     description:
       "Romantic luxury brand website with elegant product displays and sophisticated visual storytelling.",
-    image: vale.url,
+    image:
+      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=800&auto=format&fit=crop",
   },
   {
     title: "Inodaya",
     url: "https://inodaya.base44.app",
     description:
       "Innovative Indian startup website combining modern technology with vibrant cultural identity.",
-    image: inodaya.url,
+    image:
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop",
   },
   {
     title: "ECCI",
     url: "https://ecci.base44.app",
     description:
       "Professional institute website featuring educational programs, corporate training, and excellence.",
-    image: ecci.url,
+    image:
+      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800&auto=format&fit=crop",
   },
   {
     title: "Mindful Care",
     url: "https://mindful-care.base44.app",
     description:
       "Mental health and wellness platform with calming design, resources, and professional care services.",
-    image: mindful.url,
+    image:
+      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop",
   },
   {
     title: "Awon India Solutions",
     url: "https://awonindiasolutions.base44.app",
     description:
       "IT solutions company website showcasing technology services, team expertise, and client...",
-    image: awon.url,
+    image:
+      "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=800&auto=format&fit=crop",
   },
   {
     title: "The Voice of Media",
     url: "https://thevoiceofmedia.base44.app",
     description:
       "Dynamic digital media platform featuring multimedia content, news coverage, and media production.",
-    image: voice.url,
+    image:
+      "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=800&auto=format&fit=crop",
   },
   {
     title: "Workvise",
     url: "https://workvise.base44.app",
     description:
       "Modern HR and workforce management SaaS platform with analytics dashboards and team tools.",
-    image: workvise.url,
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
   },
   {
     title: "ProGamez",
     url: "https://progamez.base44.app",
     description:
       "Gaming and esports platform with dynamic visuals, tournament features, and community engagement.",
-    image: progamez.url,
+    image:
+      "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=800&auto=format&fit=crop",
   },
 ];
 
@@ -352,7 +367,7 @@ export const stats: {
 }[] = [
   { icon: "globe", value: 50, suffix: "+", label: "Projects Delivered" },
   { icon: "users", value: 40, suffix: "+", label: "Happy Clients" },
-  { icon: "trending", value: 2, prefix: "$", suffix: "M+", label: "Revenue Generated" },
+  { icon: "trending", value: 10, prefix: "₹", suffix: "L+", label: "Revenue Generated" },
   { icon: "award", value: 99, suffix: "%", label: "Client Satisfaction" },
 ];
 

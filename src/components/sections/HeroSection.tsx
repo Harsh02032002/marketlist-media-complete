@@ -38,7 +38,7 @@ export function HeroSection() {
             <TransparentLogo
               src={brand.logo}
               alt={brand.name}
-              className="relative z-10 h-28 sm:h-36 md:h-44 w-auto object-contain drop-shadow-[0_0_35px_rgba(168,85,247,0.7)]"
+              className="relative z-10 h-20 sm:h-28 md:h-32 max-h-32 w-auto max-w-[220px] sm:max-w-[300px] object-contain drop-shadow-[0_0_25px_rgba(168,85,247,0.7)]"
             />
           </motion.div>
 
@@ -47,13 +47,13 @@ export function HeroSection() {
             initial={{ opacity: 0, y: -16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-neon-blue/30 bg-neon-blue/10 px-5 py-2"
+            className="mb-6 inline-flex max-w-[92vw] items-center gap-1.5 rounded-full border border-neon-blue/30 bg-neon-blue/10 px-3.5 py-1.5"
           >
-            <span className="text-neon-blue text-xs">✨</span>
-            <span className="font-heading text-xs font-semibold tracking-[0.22em] text-neon-blue uppercase">
+            <span className="text-neon-blue text-[10px] sm:text-xs">✨</span>
+            <span className="font-heading text-[10px] sm:text-xs font-semibold tracking-[0.12em] sm:tracking-[0.18em] text-neon-blue uppercase text-center">
               WEB DEVELOPMENT & DIGITAL MARKETING
             </span>
-            <span className="text-neon-blue text-xs">✨</span>
+            <span className="text-neon-blue text-[10px] sm:text-xs">✨</span>
           </motion.div>
 
           {/* Main Headline (We Build Digital / Experiences That / Convert) */}
@@ -110,22 +110,22 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.5 }}
-            className="mt-16 grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6 w-full max-w-4xl"
+            className="mt-10 grid grid-cols-2 gap-2.5 sm:grid-cols-4 sm:gap-5 w-full max-w-4xl px-2"
           >
             {stats.map((s) => {
               const Icon = statIcons[s.icon]!;
               return (
                 <div
                   key={s.label}
-                  className="glass flex flex-col items-center gap-1.5 rounded-2xl px-5 py-4 border border-border/80"
+                  className="glass flex flex-col items-center gap-1 rounded-xl p-3 sm:p-4 border border-border/80"
                 >
-                  <Icon className="h-5 w-5 text-neon-blue" />
-                  <p className="font-display text-2xl font-bold text-foreground">
+                  <Icon className="h-4 w-4 sm:h-5 sm:w-5 text-neon-blue" />
+                  <p className="font-display text-lg sm:text-2xl font-bold text-foreground">
                     {s.prefix ?? ""}
                     {s.value}
                     {s.suffix ?? ""}
                   </p>
-                  <p className="text-center text-xs text-muted-foreground">{s.label}</p>
+                  <p className="text-center text-[10px] sm:text-xs text-muted-foreground leading-tight">{s.label}</p>
                 </div>
               );
             })}

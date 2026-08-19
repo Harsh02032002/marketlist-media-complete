@@ -1,7 +1,8 @@
 import * as motion from "motion/react-client";
-import { founder } from "@/data/site";
+import { founder, brand } from "@/data/site";
 import { SectionHeading } from "@/components/SectionHeading";
 import { socialIcons } from "@/components/icons";
+import { TransparentLogo } from "@/components/TransparentLogo";
 
 export function FounderSection() {
   return (
@@ -36,8 +37,13 @@ export function FounderSection() {
               <div className="relative h-52 w-52 sm:h-64 sm:w-64">
                 {/* Glow background */}
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-neon-blue/30 via-neon-purple/30 to-neon-pink/30 blur-2xl" />
-                <div className="relative flex h-full w-full items-center justify-center rounded-full border-2 border-neon-blue/40 bg-gradient-to-br from-neon-blue/20 to-neon-purple/20 glass-strong">
-                  <span className="font-display text-6xl font-black text-gradient">
+                <div className="relative flex h-full w-full flex-col items-center justify-center gap-1 rounded-full border-2 border-neon-blue/40 bg-gradient-to-br from-neon-blue/20 to-neon-purple/20 glass-strong p-4">
+                  <TransparentLogo
+                    src={brand.logo}
+                    alt={brand.name}
+                    className="h-10 sm:h-14 w-auto object-contain drop-shadow-[0_0_12px_rgba(120,180,255,0.6)]"
+                  />
+                  <span className="font-display text-4xl sm:text-5xl font-black text-gradient">
                     {founder.initials}
                   </span>
                 </div>

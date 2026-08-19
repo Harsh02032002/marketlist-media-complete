@@ -78,7 +78,7 @@ export function TransparentLogo({
     <img
       src={cleanedSrc}
       alt={alt}
-      className={className}
+      className={`max-w-full object-contain ${className}`}
       style={{
         mixBlendMode: "lighten",
         ...style,
