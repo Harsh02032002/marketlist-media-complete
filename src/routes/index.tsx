@@ -1,24 +1,65 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ParticleBackground } from "@/components/ParticleBackground";
+import { Navbar } from "@/components/Navbar";
+import { FloatingButtons } from "@/components/FloatingButtons";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { ServicesSection } from "@/components/sections/ServicesSection";
+import { PricingSection } from "@/components/sections/PricingSection";
+import { PortfolioSection } from "@/components/sections/PortfolioSection";
+import { ResultsSection } from "@/components/sections/ResultsSection";
+import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
+import { FounderSection } from "@/components/sections/FounderSection";
+import { TechStackSection } from "@/components/sections/TechStackSection";
+import { ContactSection } from "@/components/sections/ContactSection";
+import { Footer } from "@/components/sections/Footer";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      {
+        title:
+          "Marketlist Media — Web Development & Digital Marketing | Bangalore",
+      },
+      {
+        name: "description",
+        content:
+          "Marketlist Media transforms brands into powerful digital presences. Web development, digital marketing, UI/UX design & SEO — Bangalore, India.",
+      },
+      {
+        property: "og:url",
+        content: "https://marketlist.media",
+      },
+    ],
+  }),
+  component: HomePage,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function HomePage() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      {/* Full-page starfield + glow blobs */}
+      <ParticleBackground />
+
+      {/* Sticky nav */}
+      <Navbar />
+
+      {/* Page sections — in order per the brief */}
+      <main>
+        <HeroSection />
+        <ServicesSection />
+        <PricingSection />
+        <PortfolioSection />
+        <ResultsSection />
+        <TestimonialsSection />
+        <FounderSection />
+        <TechStackSection />
+        <ContactSection />
+      </main>
+
+      <Footer />
+
+      {/* Floating WhatsApp + Call */}
+      <FloatingButtons />
+    </>
   );
 }

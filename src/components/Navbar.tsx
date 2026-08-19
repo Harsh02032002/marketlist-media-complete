@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { brand, navLinks } from "@/data/site";
 import { scrollToSection } from "@/lib/scroll";
+import { TransparentLogo } from "@/components/TransparentLogo";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -25,19 +26,17 @@ export function Navbar() {
         scrolled ? "glass-strong shadow-lg shadow-black/40" : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <nav className="mx-auto flex h-[80px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <button
           type="button"
           onClick={() => go("home")}
           aria-label={`${brand.name} home`}
-          className="flex items-center gap-2"
+          className="flex items-center gap-3"
         >
-          <img
+          <TransparentLogo
             src={brand.logo}
             alt={`${brand.name} logo`}
-            width={40}
-            height={40}
-            className="h-8 w-8 object-contain drop-shadow-[0_0_10px_rgba(120,180,255,0.5)]"
+            className="h-10 sm:h-12 w-auto object-contain max-h-12 drop-shadow-[0_0_14px_rgba(120,180,255,0.5)]"
           />
         </button>
 

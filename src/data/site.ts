@@ -21,7 +21,7 @@ export const brand = {
   tagline: "Web Development & Digital Marketing",
   description:
     "Transforming brands into powerful digital presences with cutting-edge solutions.",
-  logo: logo.url,
+  logo: "/logo.png",
 };
 
 export const contact = {

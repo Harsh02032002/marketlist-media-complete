@@ -77,21 +77,48 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Marketlist Media — Web Development & Digital Marketing" },
+      {
+        name: "description",
+        content:
+          "Marketlist Media: Transforming brands into powerful digital presences with cutting-edge web development, digital marketing, UI/UX design, and SEO solutions. Based in Bangalore, India.",
+      },
+      { name: "author", content: "Marketlist Media" },
+      { name: "theme-color", content: "#000000" },
+      {
+        property: "og:title",
+        content: "Marketlist Media — Web Development & Digital Marketing",
+      },
+      {
+        property: "og:description",
+        content:
+          "Transforming brands into powerful digital presences with cutting-edge solutions.",
+      },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Marketlist Media" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Marketlist Media" },
+      {
+        name: "twitter:description",
+        content: "Web Development & Digital Marketing — Bangalore, India",
+      },
     ],
     links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap",
+      },
       {
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon.png", type: "image/png" },
     ],
   }),
   shellComponent: RootShell,
@@ -102,7 +129,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <HeadContent />
       </head>

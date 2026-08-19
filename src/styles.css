@@ -76,6 +76,15 @@
   }
 }
 
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 @utility glass {
   background-color: color-mix(in oklab, var(--card) 72%, transparent);
   border: 1px solid var(--border);
